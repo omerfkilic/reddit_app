@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: ((context) => PostBloc())),
       ],
       child: const MaterialApp(
-        title: 'Material App',
+        debugShowCheckedModeBanner: false,
+        title: 'Reddit Posts',
         home: HomePage(),
       ),
     );

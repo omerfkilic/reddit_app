@@ -1,7 +1,3 @@
-// ignore_for_file: avoid_print
-
-import 'dart:convert';
-
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
@@ -14,23 +10,26 @@ part 'post_state.dart';
 class PostBloc extends Bloc<PostEvent, PostState> {
   PostModel? postModel;
   List<Map<String, dynamic>> allPosts = [];
-  PostBloc() : super(PostInitial()) {
+  PostBloc() : super(PostStateInitial()) {
     on<PostEvent>((event, emit) {
-      // TODO: implement event handler
+      print('PostEvent');
     });
     on<GetAllPostsEvent>((event, emit) async {
       print('GetAllPostsEvent');
-      var response = await reddit_api.getAllPosts();
-      postModel = postModelFromJson(response!.body);
-      List<Child> _tempList = postModel!.data.children;
-      allPosts = [];
-      for (var element in _tempList) {
-        allPosts.add(element.data.toJson());
-      }
-      emit(PostsDone());
+      emit(PostStateLoading());
+      var response = await reddit_api.getAllPostsFromApi();
+      if (response == null) {
+        emit(PostStateError());
+      } else {
+        postModel = postModelFromJson(response.body);
 
-      //TODO servisten verileri çağır
-      //TODO verileri modela çevirip ekrana yazdır
+        List<Child> tempList = postModel!.data.children;
+        allPosts = [];
+        for (var element in tempList) {
+          allPosts.add(element.data.toJson());
+        }
+        emit(PostStateDone());
+      }
     });
   }
 }
