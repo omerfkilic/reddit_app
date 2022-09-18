@@ -1,22 +1,18 @@
 {
     "kind": "Listing",
     "data": {
-        "after": null,
-        "dist": 14,
-        "modhash": "92t29vezv36c3d2110e4d29af2dc346c917156c329f9e9cfa3",
-        "geo_filter": "",
         "children": [
             {
                 "kind": "t3",
                 "data": {
                     "subreddit": "FlutterDev",
-                    "!!selftext": "Is it possible to develop Lock Screen Widgets with Flutter? If not, can I add them separately in my IOS folder?",
+                    "selftext": "Is it possible to develop Lock Screen Widgets with Flutter? If not, can I add them separately in my IOS folder?",
                     "author_fullname": "t2_duhqrnty",
-                    "!!title": "IOS 16 Lock Screen Widgets with Flutter?",
+                    "title": "IOS 16 Lock Screen Widgets with Flutter?",
                     "subreddit_name_prefixed": "r/FlutterDev",
-                    "thumbnail_height": 12,
+                    "thumbnail_height": null,
                     "name": "t3_xgxh3d",
-                    "thumbnail_width": 12,
+                    "thumbnail_width": null,
                     "thumbnail": "self",
                     "created": 1663448309,
                     "wls": 6,

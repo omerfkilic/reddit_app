@@ -7,6 +7,6 @@ abstract class PostEvent extends Equatable {
 }
 
 //verileri çekiceğimiz event
-class GetAllPosts extends PostEvent {
-  GetAllPosts();
+class GetAllPostsEvent extends PostEvent {
+  GetAllPostsEvent();
 }
