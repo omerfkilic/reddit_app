@@ -12,3 +12,5 @@ Future<http.Response?> getAllPosts() async {
     return response;
   }
 }
+
+Future getTumbnail(String url) async {}

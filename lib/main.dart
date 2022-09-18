@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:reddit_app/core/post_bloc/bloc/post_bloc.dart';
+import 'package:reddit_app/core/post_bloc/post_bloc.dart';
 import 'package:reddit_app/pages/home_page/screen/home_page.dart';
 
 void main() => runApp(const MyApp());

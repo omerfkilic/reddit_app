@@ -7,7 +7,7 @@ abstract class PostState {}
 class PostInitial extends PostState {}
 
 //verileri çekerkenki event
-class PostPostsLoading extends PostState {}
+class PostsLoading extends PostState {}
 
 //veriler çekildikten sonraki event
-class PostPostsDone extends PostState {}
+class PostsDone extends PostState {}
