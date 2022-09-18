@@ -2,12 +2,12 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
-part 'post_bloc_event.dart';
-part 'post_bloc_state.dart';
+part 'post_event.dart';
+part 'post_state.dart';
 
-class PostBlocBloc extends Bloc<PostBlocEvent, PostBlocState> {
-  PostBlocBloc() : super(PostBlocInitial()) {
-    on<PostBlocEvent>((event, emit) {
+class PostBloc extends Bloc<PostEvent, PostState> {
+  PostBloc() : super(PostInitial()) {
+    on<PostEvent>((event, emit) {
       // TODO: implement event handler
     });
     on<GetAllPosts>((event, emit) async {
