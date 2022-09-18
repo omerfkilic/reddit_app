@@ -5,6 +5,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //TODO yükleme ekranında CircularProgressIndicator olsun ve ekran flu olsun
+    //TODO floating action buttondan verileri çekip refreshlicez
     return Scaffold();
   }
 }
